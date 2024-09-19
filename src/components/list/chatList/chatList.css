@@ -1,0 +1,91 @@
+.chatList {
+  flex: 1;
+  overflow: auto;
+}
+.chatList .search {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.searchBar {
+  color: white;
+  flex: 1;
+  background-color: rgba(127, 139, 141, 0.7);
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  gap: 20px;
+  padding: 10px;
+}
+
+.searchbarInput {
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+}
+
+.add {
+  height: 36px;
+  width: 36px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(127, 139, 141, 0.7);
+  cursor: pointer;
+}
+
+.search img:not(img[class="add"]) {
+  width: 20px;
+  height: 20px;
+}
+
+.item {
+  display: flex;
+  color: white;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  cursor: pointer;
+  border-bottom: 1px solid #dddddd35;
+}
+.item img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.item .texts {
+  display: flex;
+  flex-direction: column;
+  gap: 10;
+}
+
+.item .texts span {
+  font-weight: 500;
+}
+
+.item .texts p {
+  font-weight: 300;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.currentchats::-webkit-scrollbar {
+  width: 0px;
+}
+
+.selectChats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+  padding: 20px;
+  border-bottom: 1px solid #dddddd35;
+  h4 {
+    color: white;
+    cursor: pointer;
+  }
+}

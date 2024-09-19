@@ -1,0 +1,49 @@
+.Logout {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "logout logout logout"
+    "cancel cancel cancel";
+  row-gap: 20px;
+  column-gap: 20px;
+  height: max-content;
+  width: max-content;
+  padding: 30px;
+  background-color: rgba(29, 31, 31, 0.8);
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  color: white;
+  align-items: center;
+
+  h2 {
+    grid-area: header;
+  }
+  .logout {
+    width: 100%;
+    grid-area: logout;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #da4557;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  .cancel {
+    grid-area: cancel;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #5183fe;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+  }
+}

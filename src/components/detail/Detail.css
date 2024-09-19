@@ -1,0 +1,134 @@
+.Detail {
+  flex: 1;
+  overflow-y: auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.Detail::-webkit-scrollbar {
+  width: 0;
+}
+
+.Detail .user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  border: 1px solid #dddddd35;
+  gap: 20px;
+}
+
+.Detail .user img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.Detail .info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 10px;
+  padding: 30px;
+}
+
+.Detail .info .option .title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Detail .info .option .title span {
+  font-weight: bold;
+}
+
+.Detail .info .option .title img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(127, 139, 141, 0.7);
+  padding: 10px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.photos {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.photoDetail {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.photoDetail img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.photoDetail span {
+  font-size: 14px;
+  font-weight: 300;
+  color: lightgray;
+}
+
+.photoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.photoItem .downloadIcon {
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px;
+  height: 30px;
+  width: 30px;
+  background-color: rgba(127, 139, 141, 0.7);
+  object-fit: cover;
+}
+
+.info button {
+  padding: 20px 10px;
+  background-color: #da4557;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.info button:hover {
+  background-color: #c43e4f;
+}
+
+.info button[class="logoutButton"] {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #5183fe;
+  color: white;
+}
+
+.info button[class="logoutButton"]:hover {
+  background-color: #4a7bf6;
+}
+
+.blockdiv {
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.blockdiv button {
+  width: 100%;
+}

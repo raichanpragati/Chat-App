@@ -1,0 +1,280 @@
+.chat {
+  height: 100%;
+  flex: 2;
+  border-left: 1px solid #dddddd35;
+  border-right: 1px solid #dddddd35;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat .top {
+  display: flex;
+
+  border-bottom: 1px solid #dddddd35;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat .top .user img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.chat .top .user {
+  display: flex;
+}
+
+.chat .top .texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.chat .top .texts span {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.chat .top .texts p {
+  font-size: 14px;
+  font-weight: 300;
+  color: white;
+}
+
+.top .icons {
+  cursor: pointer;
+}
+
+.top .icons img {
+  width: 20px;
+  height: 20px;
+}
+
+.chat .center {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+  flex: 1;
+  padding: 20px;
+  margin-top: auto;
+}
+
+.chat .center::-webkit-scrollbar {
+  width: 0;
+}
+
+.center .message {
+  width: fit-content;
+  max-width: 70%;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+
+.username {
+  color: white;
+}
+
+.center .message img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.center .message .texts {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.center .message .texts p {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #5183fe;
+  width: fit-content;
+  align-self: flex-start;
+}
+
+.center .message .texts span {
+  font-size: 13px;
+}
+
+.center .message.own .texts span {
+  align-self: flex-end;
+}
+
+.center .message.own {
+  max-width: 70%;
+  align-self: flex-end;
+}
+
+.center .message .texts img {
+  width: 400px;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  align-self: flex-end;
+}
+
+.center .message.own .texts p {
+  background-color: white;
+  width: fit-content;
+  align-self: flex-end;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-top: auto;
+  border-top: 1px solid #dddddd35;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.bottom .message-controls {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+}
+
+.bottom .selected-image {
+  display: flex;
+  position: relative;
+  align-items: center;
+  background-color: rgba(127, 139, 141, 0.7);
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: auto;
+}
+
+.bottom .selected-image .cancel {
+  display: grid;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: rgba(127, 139, 141, 0.7);
+  border-radius: 10px;
+}
+.bottom .selected-image .cancel img {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.bottom .message-controls .icons {
+  display: flex;
+  gap: 20px;
+}
+
+.bottom .message-controls .messageInput {
+  display: flex;
+  resize: none;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(127, 139, 141, 0.7);
+  border: none;
+  padding: 10px;
+  color: white;
+  flex: 1;
+  border-radius: 10px;
+  outline: none;
+  height: 35px;
+}
+
+.messageInput::-webkit-scrollbar {
+  width: 0;
+}
+
+.messageInput::placeholder {
+  color: white;
+}
+
+.bottom .icons {
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.bottom img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.bottom .messageInput {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(127, 139, 141, 0.7);
+  border: none;
+  padding: 10px;
+  color: white;
+  flex: 1;
+  border-radius: 10px;
+  outline: none;
+}
+
+.send {
+  outline: none;
+  border: none;
+  background-color: #5183fe;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.emoji {
+  position: relative;
+}
+
+.emojipicker {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+}
+
+.emojipicker.full {
+  left: -345px;
+}
+
+.selected-image .texts img {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.blocked {
+  align-self: center;
+  justify-self: center;
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+  margin-top: 40%;
+}
+
+.time {
+  font-size: 12px;
+  color: #252525e5;
+  font-weight: 300;
+}
+
+.message.own .time {
+  align-self: flex-end;
+}

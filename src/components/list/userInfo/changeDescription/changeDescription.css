@@ -1,0 +1,51 @@
+.changeDescription {
+  display: grid;
+  grid-template-areas:
+    "header header cross"
+    "input input button";
+  row-gap: 20px;
+  column-gap: 20px;
+  height: max-content;
+  width: max-content;
+  padding: 30px;
+  background-color: rgba(29, 31, 31, 0.8);
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  color: white;
+  align-items: center;
+
+  h2 {
+    grid-area: header;
+  }
+  button {
+    grid-area: button;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #5183fe;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  input {
+    grid-area: input;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  img {
+    grid-area: cross;
+    justify-self: end;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+  }
+}

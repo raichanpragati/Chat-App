@@ -1,0 +1,161 @@
+.creategroupchat {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "AddUsers SelectedUsers"
+    "GroupName GroupName";
+  grid-auto-columns: 1fr 1fr;
+  grid-auto-rows: min-content auto min-content;
+  position: absolute;
+  background-color: rgba(29, 31, 31, 0.8);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 500px;
+  width: 700px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 10px;
+
+  button {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  input {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #dddddd35;
+    color: white;
+  }
+
+  input::placeholder {
+    color: white;
+  }
+
+  h2 {
+    grid-area: header;
+    color: white;
+  }
+
+  img {
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .selectedUsers {
+    grid-area: SelectedUsers;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      margin-bottom: 33px;
+    }
+
+    .selected {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 10px;
+
+      button {
+        margin-left: auto;
+      }
+    }
+  }
+
+  .addUsers {
+    grid-area: AddUsers;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid #dddddd35;
+    padding-right: 10px;
+    .controls {
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .controls {
+      width: 100%;
+
+      input {
+        width: 240px;
+        margin-right: 10px;
+      }
+
+      button {
+        width: 20%;
+      }
+    }
+    .foundUsers {
+      display: flex;
+      width: 100%;
+      gap: 10px;
+      align-items: center;
+
+      button {
+        margin-left: auto;
+        width: 100px;
+      }
+
+      .texts {
+        margin-left: 10px;
+        font-size: 14px;
+      }
+    }
+  }
+  .groupname {
+    grid-area: GroupName;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    gap: 5px;
+
+    .selectAvatar {
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      gap: 10px;
+      align-items: center;
+
+      label {
+        text-decoration: underline;
+      }
+    }
+
+    .groupnamecontrols {
+      width: 100%;
+      display: flex;
+      gap: 10px;
+
+      button {
+        margin-left: auto;
+        height: 40px;
+
+        &.cancel {
+          background-color: #da4557;
+          color: white;
+        }
+
+        &.create {
+          background-color: #5183fe;
+          color: white;
+        }
+      }
+      input {
+        flex: 1;
+      }
+    }
+    button {
+      margin-left: auto;
+    }
+  }
+}
